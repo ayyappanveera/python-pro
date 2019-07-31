@@ -1,6 +1,12 @@
-x=int(input())    
-y=map(int,input().split())
-if(x%2==0):
-  print("no")
+x=int(input())
+li=list(map(int,input().split()))
+c=0
+for i in range(1,len(li)):
+    if (sum(li[:i]))//len(li[:i])==(sum(li[i:]))//len(li[i:]):
+        c+=1
+    else:
+        c=0
+if c>=1:
+    print("yes")
 else:
-  print("yes")  
+    print("no")
